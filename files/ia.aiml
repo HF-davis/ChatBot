@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>Hello</pattern>
+	<template>
+	    <random>
+	        <li>Hello!</li>
+	        <li>Hello!, nice to meet you</li>
+	        <li>Hello!, I am ready</li>
+	    </random>
+	</template>
+        
+    </category>
+    
+    <category>
+        <pattern>TELL ME ABOUT *</pattern>
+	<template>
+	    Here is some infomation about <set name="city"><star/></set>.
+	    <ol>
+        <li>This city is in Eurpe</li>
+        <li>Is a island</li>
+        <li>People is friendly</li>
+    </ol>
+	    <button>
+	        <text>More inf click here</text>
+	        <url>https://en.wikipedia.org/wiki/<get name="city"/> </url>
+	    </button>
+	</template> 
+	
+    </category>
+    
+    <category>
+        <pattern>I NEED A MAP </pattern>
+	<template>
+	    Yes, I have a Map from <get name="city"/> 
+	    <button>
+	        <text>Map here</text>
+	        <url>https://www.google.com/search?q=map+from+<star/>&source=hp&ei=35o-YZmEAo7K1sQPptqX-Ac&iflsig=ALs-wAMAAAAAYT6o75qCpulXvWXUP5aqQ1T8cH5ZiRkO&oq=map+from+london&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEBMyBAgAEBMyBAgAEBMyBAgAEBMyBAgAEBMyBAgAEBMyCAgAEBYQHhATMggIABAWEB4QEzIICAAQFhAeEBMyCAgAEBYQHhATOggIABCABBCxAzoOCC4QgAQQsQMQxwEQ0QM6CwgAEIAEELEDEIMBOgUIABCABDoICAAQsQMQgwE6CwguEIAEELEDEIMBOggILhCABBCxAzoFCC4QgAQ6BwgAEIAEEAo6AggmOgYIABAWEB46BggAEAoQEzoKCAAQFhAKEB4QE1CpDFiFL2DlMGgIcAB4AYABpQKIAeYdkgEGMC4xMi43mAEAoAEBsAEA&sclient=gws-wiz&ved=0ahUKEwjZ75a12PryAhUOpZUCHSbtBX8Q4dUDCAY&uact=5</url>
+	    </button>
+	</template>
+    
+    </category>
+    
+    <category>
+        <pattern>What about another country</pattern>
+	<template>do you like Iceland</template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>do you like Iceland</that>
+	<template>
+	    Amazing, this country is very beautiful
+	</template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>do you like Iceland</that>
+	<template>
+	    I desagree with you
+	</template>
+    </category>
+    <category>
+        <pattern>why</pattern>
+	<template>
+	    Because, this country is beautiful and amazing
+	</template>
+    </category>
+    <category>
+        <pattern>what is your name</pattern>
+	<template>
+	    My name is Murphy like Murphy's Law
+	</template>
+    </category>
+    <category>
+        <pattern>what is the name of your developer</pattern>
+	<template>
+	    His name is Davis, he's very cool
+	</template>
+    </category>
+    <category>
+        <pattern>How are you feeling today</pattern>
+	<template>
+	    <think><set name="state">sad</set></think>
+	    <condition name="state" value="happy">
+	        I'm happy
+	    </condition>
+	    <condition name="state" value="sad">
+	        I'm sad
+	    </condition>
+	</template>
+    </category>
+    
+	
+</aiml>
